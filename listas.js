@@ -22,3 +22,15 @@ const total = alunos.reduce((previous, current) => {
 }, 0)
 const media = total/alunos.length
 console.log(`A média de notas é ${media}`)
+
+const search = 'eduardo'
+const nota = alunos.find(aluno => aluno.nome === search ).nota
+console.log(`A nota do ${search} foi de ${nota}`)
+
+const corte = 2
+const todosAcimaDaNotaDeCorte = alunos.every(nome => nome.nota >= corte)
+console.log(todosAcimaDaNotaDeCorte)
+
+const notaMaxima = 10
+const alguemComNotaMaxima = alunos.some(nome => nome.nota === notaMaxima)
+console.log(alguemComNotaMaxima)
